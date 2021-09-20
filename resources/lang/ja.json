@@ -1,0 +1,9 @@
+{
+    "Register" : "登録",
+    "Gender" : "性別",
+    "E-Mail" : "メールアドレス",
+    "Name" : "氏名",
+    "Telephone" : "電話番号",
+    "Password" : "パスワード",
+    "Confirm Password" : "パスワード確認"
+}
