@@ -15,7 +15,9 @@ class AddColumnToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('gender');
-            $table->date('birth_day');
+            $table->unsignedBigInteger('birth_year');
+            $table->unsignedBigInteger('birth_month');
+            $table->unsignedBigInteger('birth_date');
             $table->unsignedBigInteger('telephone_number');
         });
     }
