@@ -15,7 +15,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}"  autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"  autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -43,9 +43,9 @@
                             <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
 
                             <div class="col-md-6" style="padding-top: 8px">
-                                <input id="gender-m" type="radio" name="gender" value="male">
+                                <input id="gender-m" type="radio" name="gender" value="male" class="@error('gender') is-invalid @enderror" {{ old("gender") == "male" ? 'checked':""}}>
                                 <label for="gender-m">男性</label>
-                                <input id="gender-f" type="radio" name="gender" value="female">
+                                <input id="gender-f" type="radio" name="gender" value="female" class="@error('gender') is-invalid @enderror" {{ old("gender") == "female" ? 'checked':""}}>
                                 <label for="gender-f">女性</label>
 
                                 @error('gender')
@@ -60,7 +60,7 @@
                             <label for="telephone_number" class="col-md-4 col-form-label text-md-right">{{ __('Telephone') }}</label>
 
                             <div class="col-md-6">
-                                <input id="telephone_number" type="tel" class="form-control @error('telephone_number') is-invalid @enderror" name="telephone_number" value="{{ old('telephone_number') }}" required autocomplete="telephone_number">
+                                <input id="telephone_number" type="tel" class="form-control @error('telephone_number') is-invalid @enderror" name="telephone_number" value="{{ old('telephone_number') }}"  autocomplete="telephone_number">
 
                                 @error('telephone_number')
                                     <span class="invalid-feedback" role="alert">
@@ -74,8 +74,8 @@
                             <label for="birth_year" class="col-md-4 col-form-label text-md-right">生年月日 : 年 </label>
 
                             <div class="col-md-6">
-                                <select name="birth_year" id="birth_year" class="form-control @error('birth_year') is-invalid @enderror" name="birth_year" required autocomplete="new-birth_year">
-                                    <option value="0">----</option>
+                                <select name="birth_year" id="birth_year" class="form-control @error('birth_year') is-invalid @enderror" name="birth_year"  autocomplete="birth_year">
+                                    <option value="">----</option>
                                 </select>
 
                                 @error('birth_year')
@@ -90,8 +90,8 @@
                             <label for="birth_month" class="col-md-4 col-form-label text-md-right">生年月日 : 月 </label>
 
                             <div class="col-md-6">
-                                <select name="birth_month" id="birth_month" class="form-control @error('birth_month') is-invalid @enderror" name="birth_month" required autocomplete="new-birth_month">
-                                    <option value="0">--</option>
+                                <select name="birth_month" id="birth_month" class="form-control @error('birth_month') is-invalid @enderror" name="birth_month"  autocomplete="birth_month">
+                                    <option value="">--</option>
                                 </select>
 
                                 @error('birth_month')
@@ -106,8 +106,8 @@
                             <label for="birth_date" class="col-md-4 col-form-label text-md-right">生年月日 : 日 </label>
 
                             <div class="col-md-6">
-                                <select name="birth_date" id="birth_date" class="form-control @error('birth_date') is-invalid @enderror" name="birth_date" required autocomplete="new-birth_date">
-                                    <option value="0">--</option>
+                                <select name="birth_date" id="birth_date" class="form-control @error('birth_date') is-invalid @enderror" name="birth_date"  autocomplete="birth_date">
+                                    <option value="">--</option>
                                 </select>
 
                                 @error('birth_date')
@@ -122,7 +122,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password"  autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -136,7 +136,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation"  autocomplete="new-password">
                             </div>
                         </div>
 

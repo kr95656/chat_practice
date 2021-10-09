@@ -145,6 +145,17 @@ return [
     |
     */
 
-    'attributes' => [],
+    // 'attributes' => [],
+    'attributes' => [
+        'name' => '氏名',
+        'email' => 'メールアドレス',
+        'password' => 'パスワード',
+        'password_confirmation' => 'パスワード確認用',
+        'gender' => '性別',
+        'telephone_number' => '電話番号',
+        'birth_year' => '生年月日の年',
+        'birth_month' => '生年月日の月',
+        'birth_date' => '生年月日の日',
+    ],
 
 ];
