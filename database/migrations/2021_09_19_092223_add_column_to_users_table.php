@@ -18,7 +18,7 @@ class AddColumnToUsersTable extends Migration
             $table->unsignedBigInteger('birth_year');
             $table->unsignedBigInteger('birth_month');
             $table->unsignedBigInteger('birth_date');
-            $table->unsignedBigInteger('telephone_number');
+            $table->string('telephone_number');
         });
     }
 

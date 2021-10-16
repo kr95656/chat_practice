@@ -57,7 +57,7 @@ class RegisterController extends Controller
             'birth_year' => ['required'],
             'birth_month' => ['required'],
             'birth_date' => ['required'],
-            'telephone_number' => ['required']
+            'telephone_number' => ['required', 'string']
         ]);
     }
 
