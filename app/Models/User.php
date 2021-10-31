@@ -43,4 +43,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function messages() {
+        return $this->hasMany(Message::class);
+    }
+
+    public function groups()
+    {
+        return $this->belongsToMany('Group::class')->withTimestamps(); //中間テーブルのタイムスタンプを自動更新
+        // return $this->belongsToMany('App\Models\Group')->withTimestamps();
+    }
 }

@@ -16,8 +16,6 @@ class CreateGroupUsersTable extends Migration
         Schema::create('group_users', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('group_id');
-            $table->unsignedBigInteger('user_id');
 
             // 外部キー
             $table->foreignId('group_id')->constrained()
