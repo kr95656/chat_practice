@@ -22,3 +22,5 @@ Auth::routes();
 // Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/top', 'TopController@showTop')->name('top');
+Route::get('/form', 'TopController@form')->name('form');
+Route::resource('/upload', 'UploadController');
