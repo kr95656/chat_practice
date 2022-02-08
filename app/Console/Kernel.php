@@ -5,6 +5,10 @@ dd(2);
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 dd(1);
+dd(1);
+dd(1);
+dd(1);
+dd(1);
 class Kernel extends ConsoleKernel
 {
     /**
