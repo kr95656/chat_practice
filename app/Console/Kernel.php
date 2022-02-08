@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Console;
-
+dd(2);
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 dd(1);
