@@ -19,4 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/top', 'TopController@showTop')->name('top');
+Route::get('/form', 'TopController@form')->name('form');
+Route::resource('/upload', 'UploadController');
